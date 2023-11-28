@@ -1,0 +1,20 @@
+﻿@model ToDo.Models.Account.LoginViewModel
+
+@{
+  ViewData["Title"] = "Log In - " + ToDo.ConfigurationSingleton.Instance.ApplicationName;
+}
+
+<h1>Log In</h1>
+
+<form asp-action="Login" asp-controller="Account" method="post" class="display-flex flex-direction-column">
+  <div class="display-flex flex-direction-column">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="border-bottom-2px-solid-1a3b56 margin-bottom-5px font-size-20px" />
+  </div>
+  <div class="display-flex flex-direction-column">
+    <label asp-for="Password"></label>
+    <input asp-for="Password" type="password" class="border-bottom-2px-solid-1a3b56 margin-bottom-5px font-size-20px" />
+  </div>
+
+  <button type="submit" class="full-width-regular-button">Next</button>
+</form>

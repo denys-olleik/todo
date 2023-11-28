@@ -1,0 +1,16 @@
+﻿@using ToDo
+
+@{
+    ViewData["Title"] = ConfigurationSingleton.Instance.ApplicationName;
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@if (User.Identity.IsAuthenticated)
+{
+  <ul>
+    <li>
+      <a asp-action="Index" asp-controller="Home">Home</a>
+    </li>
+  </ul>
+}
