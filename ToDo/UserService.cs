@@ -9,5 +9,10 @@ namespace ToDo
     {
       throw new NotImplementedException();
     }
+
+    public async Task<User> GetAsync(string email)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

@@ -4,6 +4,14 @@ using ToDo.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
+{
+  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver
+  {
+    NamingStrategy = new Newtonsoft.Json.Serialization.CamelCaseNamingStrategy()
+  };
+});
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

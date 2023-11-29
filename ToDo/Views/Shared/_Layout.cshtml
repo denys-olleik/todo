@@ -13,7 +13,24 @@
 
 <body>
   <header class="container">
-    
+    <nav class="display-flex">
+      <a href="~/" class="font-Roboto">@ToDo.ConfigurationSingleton.Instance.ApplicationName</a>
+      <div class="flex-1"></div>
+      <div class="display-flex">
+        @if (User.Identity.IsAuthenticated)
+        { 
+          <form id="logoutForm" asp-action="Logout" asp-controller="Account" method="post">
+            <a href="javascript:void(0);" onclick="document.getElementById('logoutForm').submit();" class="font-Roboto background-color-white font-size-16px">
+              Logout
+            </a>
+          </form>
+        }
+        else
+        {
+          <a asp-action="Login" asp-controller="Account" class="font-Roboto">Log In</a>
+        }
+      </div>
+    </nav>
   </header>
 
   <div class="container">
