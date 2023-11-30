@@ -48,7 +48,7 @@ namespace ToDo.Controllers
               IsPersistent = true
             });
 
-        return RedirectToAction("ChooseOrganization", "Account");
+        return RedirectToAction("Index", "Home");
       }
       else
       {

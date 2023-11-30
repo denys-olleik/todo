@@ -8,6 +8,7 @@
     public static ConfigurationSingleton Instance { get { return _lazy.Value; } }
 
     public string? ApplicationName { get; set; }
+    public string? ConnectionString { get; set; }
 
     private ConfigurationSingleton()
     {

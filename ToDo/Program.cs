@@ -32,6 +32,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 });
 
 ConfigurationSingleton.Instance.ApplicationName = builder.Configuration["ApplicationName"];
+ConfigurationSingleton.Instance.ConnectionString = builder.Configuration["ConnectionStrings:ToDo"];
 
 var app = builder.Build();
 
